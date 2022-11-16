@@ -10,7 +10,7 @@ router.get('/', function(req, res, next) {
 router.get('/standart', function(req, res, next) {
   res.render("agency", {
     title: "standart",
-    picture: "images/travel-agency.jpg",
+    picture: "images/travel-agency.png",
     desc: "Standart agency"
   });
 });
@@ -19,7 +19,7 @@ router.get('/standart', function(req, res, next) {
 router.get('/kartinka', function(req, res, next) {
     res.render('agency', {
     title: "kartinka",
-    picture: "images/photo-kartinka.jpg",
+    picture: "images/photo-kartinka.png",
     desc: "kartinka agency"
 
   });
@@ -29,7 +29,7 @@ router.get('/kartinka', function(req, res, next) {
 router.get('/globus', function(req, res, next) {
   res.render("agency", {
     title: "globus",
-    picture: "images/photo-globus.jpg",
+    picture: "images/photo-globus.png",
     desc: "globus photo"
   });
 });
