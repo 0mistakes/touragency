@@ -17,7 +17,7 @@ router.get('/kartinka', function(req, res, next) {
 });
 
 /* Страница chto-to eshe*/
-router.get('/generic', function(req, res, next) {
+router.get('/standart', function(req, res, next) {
   res.send("<h1>Страница generic</h1>")
 });
 
