@@ -6,26 +6,26 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
-/* Standart photo */
+/* Standart agency */
 router.get('/standart', function(req, res, next) {
   res.render("agency", {
-    title: "Standart photo",
+    title: "standart",
     picture: "images/travel-agency.png",
-    desc: "Standart Baratroom (Podpivas) from DotA 2"
+    desc: "Standart agency"
   });
 });
 
-/* Fury baratroom */
+/* kartinka agency */
 router.get('/kartinka', function(req, res, next) {
     res.render('agency', {
-    title: "kartinka photo",
+    title: "kartinka",
     picture: "images/photo-kartinka.png",
-    desc: "Skin 'Fury' Baratroom (Podpivas) from DotA 2"
+    desc: "kartinka agency"
 
   });
 });
 
-/* DotA-AllStars baratroom */
+/* globus agency */
 router.get('/globus', function(req, res, next) {
   res.render("agency", {
     title: "globus",
