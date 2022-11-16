@@ -12,5 +12,9 @@
     "express": "~4.16.1",
     "http-errors": "~1.6.3",
     "morgan": "~1.9.1"
+  },
+  "devDependencies": {
+    "node-hot-loader": "^1.21.9",
+    "webpack": "^5.74.0"
   }
 }

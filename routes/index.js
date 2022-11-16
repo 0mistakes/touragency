@@ -6,19 +6,32 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
-/* Страница глобуса */
-router.get('/globus', function(req, res, next) {
-  res.send("<h1>Страница globus</h1>")
+/* Standart agency */
+router.get('/standart', function(req, res, next) {
+  res.render("agency", {
+    title: "standart",
+    picture: "images/travel-agency.jpg",
+    desc: "Standart agency"
+  });
 });
 
-/* Страница kartinka*/
+/* kartinka agency */
 router.get('/kartinka', function(req, res, next) {
-  res.send("<h1>Страница kartinka</h1>")
+    res.render('agency', {
+    title: "kartinka",
+    picture: "images/photo-kartinka.jpg",
+    desc: "kartinka agency"
+
+  });
 });
 
-/* Страница chto-to eshe*/
-router.get('/generic', function(req, res, next) {
-  res.send("<h1>Страница generic</h1>")
+/* globus agency */
+router.get('/globus', function(req, res, next) {
+  res.render("agency", {
+    title: "globus",
+    picture: "images/photo-globus.jpg",
+    desc: "globus photo"
+  });
 });
 
 module.exports = router;
