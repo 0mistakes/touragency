@@ -10,7 +10,7 @@ async function run() {
         database.dropDatabase()
         database = client.db("agency");
         const agencys = database.collection("travel");
-        const result = await agencys.insertOne({name:"Standart"});
+        const result = await agencys.insertMany(data);
         console.log(`${result} documents were inserted`);
     } finally {
         await client.close();
