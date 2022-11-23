@@ -1,13 +1,16 @@
 var mongoose = require('mongoose')
 mongoose.connect('mongodb://127.0.0.1:27017/test')
 
-var Agenc = mongoose.model('Agenc', { name: String })
+var schema = mongoose.Schema({ name: String })
 
-var names = new Agenc({ name: 'Standart' })
-names.save(function (err) {
-    if (err) {
-        console.log(err)
-    } else {
-        console.log('Go travel')
-    }
-})  
+schema.methods.meow = function(){
+    console.log(this.get("name") + " shouted 'Go travel' ")
+
+}
+
+var Agenc = mongoose.model('Agenc', schema)
+
+var jdm = new Agenc({ name: 'Standart' })
+jdm.save(function (err) {
+    jdm.meow()
+})
