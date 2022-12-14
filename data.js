@@ -13,7 +13,7 @@ var data = [{
     {
     title: 'Globus',
     nick: 'globus',
-    avatar: '/images/photo-globus',
+    avatar: '/images/photo-globus.png',
     desc: 'globus photo'
     }
 ];

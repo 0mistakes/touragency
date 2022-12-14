@@ -4,12 +4,11 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var mongoose = require('mongoose')
-mongoose.connect('mongodb://localhost/touragency')
-
+mongoose.connect('mongodb://127.0.0.1:27017/agent')
+var agents = require('./routes/agents');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
-var agents = require('./routes/agents');
 
 var app = express();
 
@@ -41,7 +40,11 @@ app.use(function(err, req, res, next) {
 
   // render the error page
   res.status(err.status || 500);
-  res.render('error');
+  res.render('error',
+  {
+    picture: "../images/error.png",
+    title: 'Ошибка, проверьте корректность запроса.'
+  });
 });
 
 module.exports = app;

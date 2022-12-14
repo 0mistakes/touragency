@@ -1,13 +1,15 @@
 var mongoose = require('mongoose')
-mongoose.connect('mongodb://127.0.0.1:27017/test1')
-var Agenc = require("./models/travel").Agenc
+mongoose.connect('mongodb://127.0.0.1/test1')
+var Agent = require("../models/agent").Agent
 
-var val = new Agenc({
-title: "Standart",
-nick: "standart23"
+
+var agent = new Agent({
+title: "Supra",
+nick: "supraa70"
 })
 
-console.log(val)
-val.save(function(err, val, affected){
-console.log(val.title)
+
+console.log(agent)
+agent.save(function(err, agent, affected){
+console.log(agent.title)
 })
