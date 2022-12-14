@@ -16,16 +16,13 @@
     <li class="nav-item">
     <a class="nav-link" href="/">Главная</a>
     </li>
-    <li class="nav-item">
-    <a class="nav-link" href="/agents/standart">Standart</a>
-    </li>
-    <li class="nav-item">
-    <a class="nav-link" href="/agents/kartinka">Kartinka</a>
-    </li>
-    <li class="nav-item">
-    <a class="nav-link" href="/agents/globus">Globus</a>
-    </li>
     </ul>
+    <% menu.forEach(function(agent){ %>
+        <li class="nav-item">
+        <a class="nav-link" href="/agents/<%=agent.nick%>">
+            <%=agent.title%> </a>
+        </li>
+        <% }) %>
     <ul class="navbar-nav navbar-right">
     <li>
     <a class="nav-link" href="/logreg">Войти</a>
