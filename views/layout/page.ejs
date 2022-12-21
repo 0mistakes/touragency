@@ -19,9 +19,16 @@
                 <a class="nav-link" href="/agents/<%=agent.nick%>"><%=agent.title%></a>
                 </li>
                 <% })} %>
-                       </ul>
-                       <ul class="nav navbar-nav navbar-right">
-                        <li><a href="/logreg">Войти</a></li>
+                <ul class="nav navbar-nav navbar-right">
+                    <%if(user){%>
+                        <form action="/logout" method="post">
+                            <li><button type="submit" class="btn btn-
+                                                    link">Log Out</button></li>
+                        </form>
+                           <% } else { %>
+                               <li><a href="/logreg">Log In</a></li>
+                           <% } %>
+                    </ul>
                 </ul>
     </div>
     </nav>
