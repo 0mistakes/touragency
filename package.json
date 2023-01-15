@@ -16,7 +16,8 @@
     "http-errors": "~1.6.3",
     "mongodb": "^4.12.0",
     "mongoose": "^6.7.3",
-    "morgan": "~1.9.1"
+    "morgan": "~1.9.1",
+    "mysql2": "^3.0.1"
   },
   "devDependencies": {
     "node-hot-loader": "^1.21.9",
